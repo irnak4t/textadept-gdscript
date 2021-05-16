@@ -4,7 +4,7 @@ local modules = {'run'}
 for _, name in ipairs(modules) do M[name] = require('gdscript.' .. name) end
 
 textadept.file_types.extensions.gd = 'gdscript'
-textadept.editing.comment_string = '#'
+textadept.editing.comment_string.gdscript = '#'
 
 events.connect(events.LEXER_LOADED, function(name)
   if name == 'gdscript' then
